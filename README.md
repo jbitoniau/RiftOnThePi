@@ -12,13 +12,13 @@ Accessing the Oculus Rift API is done through the Oculus SDK with a minor fix fo
 ## Getting and preparing the Oculus SDK
 - Download the Linux version of the Oculus SDK at https://developer.oculusvr.com/
 - Extract it to a temporary folder of your choice
-- Run the ConfigurePermissionsAndPackages.sh (this add udev rule for the device and get required packages)
+- Run the ConfigurePermissionsAndPackages.sh (this adds udev rule for the device and download required packages)
 - Git-clone the code from RiftOnThePi 
 - Copy the Oculus SDK "Include" and "Source" directories into RiftOnThePi/Dependencies/LibOVR 
   (the directories already exist there but are empty)
 - A minor fix is needed in the file Src/Kernel/OVR_Atomic.h for it to compile on the Raspberry Pi
-- In struct AtomicOpsRawBase (at around line 94), replace the code in the OVR_CPU_ARM section with this:
-
+- In struct AtomicOpsRawBase (at around line 94), replace the code in the OVR_CPU_ARM defined section with this:
+```C++
 	#elif defined(OVR_CPU_ARM)
 	//struct FullSync { inline FullSync() { asm volatile("dmb\n"); } ~FullSync() { asm volatile("dmb\n"); } };
     //struct AcquireSync { inline AcquireSync() { } ~AcquireSync() { asm volatile("dmb\n"); } };
@@ -29,7 +29,7 @@ Accessing the Oculus Rift API is done through the Oculus SDK with a minor fix fo
 	struct AcquireSync { inline AcquireSync() { } ~AcquireSync() { MB(); } };
 	struct ReleaseSync { inline ReleaseSync() { MB(); } };
  - Now the Oculus SDK is in place and should compile OK as part of RiftOnThePi
-
+```
 ## Compiling and running RiftOnThePi
 - Go to the main RiftOnThePi directory
 	mkdir Build
