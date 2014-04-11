@@ -8,12 +8,20 @@ Rendering is done using OpenGL ES 2.0. Accessing the Oculus Rift API is done thr
 
 More information about this project and a video showing the result can be found here: http://bitoniau.blogspot.fr/2014/04/oculus-rift-on-raspberry-pi.html
 
+# Prerequisite
+```Bash
+	sudo apt-get install build-essential cmake
+```
+
 # Getting and preparing the Oculus SDK
 - Download the Linux version of the Oculus SDK at https://developer.oculusvr.com/ (version 0.2.5c at the time of writing)
 - Extract it to a temporary folder of your choice
 - Run the ConfigurePermissionsAndPackages.sh (this adds udev rule for the device and download required packages)
 - Git-clone the code from RiftOnThePi 
-- Copy the Oculus SDK "Include" and "Source" directories into RiftOnThePi/Dependencies/LibOVR 
+```Bash
+	git clone https://github.com/jbitoniau/RiftOnThePi
+```
+- Copy the Oculus SDK "LibOVR/Include" and "LibOVR/Source" directories into RiftOnThePi/Dependencies/LibOVR 
   (the directories already exist there but are empty)
 - A minor fix is needed in the file Src/Kernel/OVR_Atomic.h for it to compile on the Raspberry Pi
 - In struct AtomicOpsRawBase (at around line 94), replace the code in the OVR_CPU_ARM defined section with this:
