@@ -9,7 +9,7 @@ Rendering is done using OpenGL ES 2.0. Accessing the Oculus Rift API is done thr
 More information about this project and a video showing the result can be found here: http://bitoniau.blogspot.fr/2014/04/oculus-rift-on-raspberry-pi.html
 
 # Getting and preparing the Oculus SDK
-- Download the Linux version of the Oculus SDK at https://developer.oculusvr.com/
+- Download the Linux version of the Oculus SDK at https://developer.oculusvr.com/ (version 0.2.5c at the time of writing)
 - Extract it to a temporary folder of your choice
 - Run the ConfigurePermissionsAndPackages.sh (this adds udev rule for the device and download required packages)
 - Git-clone the code from RiftOnThePi 
