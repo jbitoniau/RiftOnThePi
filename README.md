@@ -3,8 +3,10 @@ RiftOnThePi
 
 A simple Oculus Rift test application targeted at the Raspberry Pi.
 
-The goal is to evaluate how the Raspberry Pi performs with the Rift and if it can handle it.
+The goal is to evaluate how the Raspberry Pi performs with the Rift and check whether it can handle it (the answer: yes to some extent!).
 Rendering is done using OpenGL ES 2.0. Accessing the Oculus Rift API is done through the Oculus SDK with a minor fix for the Raspberry Pi.
+
+More information about this project and a video showing the result can be found here: http://bitoniau.blogspot.fr/2014/04/oculus-rift-on-raspberry-pi.html
 
 # Getting and preparing the Oculus SDK
 - Download the Linux version of the Oculus SDK at https://developer.oculusvr.com/
