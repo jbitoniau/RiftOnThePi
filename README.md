@@ -6,9 +6,7 @@ A simple Oculus Rift test application targeted at the Raspberry Pi.
 The goal is to evaluate how the Raspberry Pi performs with the Rift and if it can handle it.
 Rendering is done using OpenGL ES 2.0. Accessing the Oculus Rift API is done through the Oculus SDK with a minor fix for the Raspberry Pi.
 
-# Compiling
-
-## Getting and preparing the Oculus SDK
+# Getting and preparing the Oculus SDK
 - Download the Linux version of the Oculus SDK at https://developer.oculusvr.com/
 - Extract it to a temporary folder of your choice
 - Run the ConfigurePermissionsAndPackages.sh (this adds udev rule for the device and download required packages)
@@ -29,7 +27,7 @@ Rendering is done using OpenGL ES 2.0. Accessing the Oculus Rift API is done thr
 	struct ReleaseSync { inline ReleaseSync() { MB(); } };
 ```
 
-## Compiling and running RiftOnThePi
+# Compiling and running RiftOnThePi
 - Go to the main RiftOnThePi directory
 ```Bash
 	mkdir Build
@@ -45,4 +43,10 @@ Rendering is done using OpenGL ES 2.0. Accessing the Oculus Rift API is done thr
 ```Bash
 	RiftOnThePi	--StereoRenderTechnique=<0 to 3> --DistortionScaleEnabled=<0 or 1> --AnimationEnabled=<0 or 1> --UseRiftOrientation=<0 or 1>
 ```		
-		
+
+# Running on Windows
+It was faster and more practical to develop this application on a Windows desktop machine. RiftOnThePi therefore also works on Windows using
+the AMD OpenGL ES SDK (you must have an AMD graphics card though). Here are the steps to compile the code:
+- Download the SDK at http://developer.amd.com/tools-and-sdks/graphics-development/amd-opengl-es-sdk/
+- Extract the gles_sdk.zip archive into RiftOnThePi/Dependencies/gles_sdk directory (there's already a placeholder folder there)
+- Build RiftOnThePi using CMake as explained for above
