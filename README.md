@@ -11,7 +11,7 @@ Rendering is done using OpenGL ES 2.0. Accessing the Oculus Rift API is done thr
 More information about this project can be found here: http://bitoniau.blogspot.fr/2014/04/oculus-rift-on-raspberry-pi.html
 
 # Prerequisite
-Install gcc and cmake
+- Install gcc and cmake
 ```Bash
 	sudo apt-get install build-essential cmake
 ```
