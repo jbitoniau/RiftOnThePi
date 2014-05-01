@@ -16,6 +16,12 @@ More information about this project can be found here: http://bitoniau.blogspot.
 	sudo apt-get install build-essential cmake
 ```
 
+- Packages required for Oculus LibOVR
+```Bash
+	sudo apt-get install libudev-dev libxext-dev mesa-common-dev freeglut3-dev libxinerama-dev
+```
+
+
 # Getting and preparing the Oculus SDK
 - Download the Linux version of the Oculus SDK at https://developer.oculusvr.com/ (version 0.2.5c at the time of writing)
 - Extract it to a temporary folder of your choice
