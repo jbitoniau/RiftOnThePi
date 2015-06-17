@@ -96,7 +96,7 @@ IF( CMAKE_SYSTEM_NAME MATCHES "Linux" )
 			 udev
 			 pthread
 			 #GL
-			 #X11
+			 X11
 			 Xinerama 
 		)
 		
