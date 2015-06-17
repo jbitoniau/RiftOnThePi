@@ -10,6 +10,11 @@ Rendering is done using OpenGL ES 2.0. Accessing the Oculus Rift API is done thr
 
 More information about this project can be found here: http://bitoniau.blogspot.fr/2014/04/oculus-rift-on-raspberry-pi.html
 
+Tested on:
+- Oculus Rift DK1
+- Raspberry PI Model B and Raspberry PI 2
+- Raspbian 2015-05-05 Kernel 3.18 (SHA-1:cb799af077930ff7cbcfaa251b4c6e25b11483de)
+
 # Prerequisite
 - Install gcc and cmake
 ```Bash
